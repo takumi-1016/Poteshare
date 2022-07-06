@@ -15,7 +15,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
   #デフォルト画像の設定
   def default_url
-    "https://publicdomainq.net/images/201710/16s/publicdomainq-0014448elf.jpg"
+    "ダウンロード.png"
   end
   def extension_allowlist
     %w(jpg jpeg gif png)

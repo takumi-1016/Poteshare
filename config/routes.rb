@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   get 'reservations/index'
   get 'rooms/new'
   get 'rooms/show'
-  get 'home/index'
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    passwords: 'users/passwords',
+    registrations: 'users/registrations'
+  }
+  resource :users
   root to: "home#index"
 end
