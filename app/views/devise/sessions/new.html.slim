@@ -1,0 +1,15 @@
+.form-wrapper
+  h1 ログイン
+  = form_with scope: :session, local: true do |f|
+    .form-item
+      =f.label :email
+      =f.text_field :email, required: "required", placeholder: "Email Address"    
+    .form-item
+      =f.label :password
+      =f.text_field :password, required: "required", placeholder: "Password"
+    .button-panel
+      =f.submit 'ログイン', class: 'button'
+    .form-footer
+     =link_to "新規ユーザー登録", new_user_registration_path
+  
+  

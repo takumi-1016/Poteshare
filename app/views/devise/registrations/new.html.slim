@@ -1,0 +1,19 @@
+.form-wrapper
+  h3 新しいアカウントを作成
+  = form_with model:@user,scope: :session, local: true do |f|
+    .form-item 
+      =f.label :name
+      =f.text_field :name, required: "required",placeholder: 'User Name'
+    .form-item
+      =f.label :email
+      =f.text_field :email, required: "required", placeholder: "Email Address"
+    .form-item
+      =f.label :password
+      =f.text_field :password, required: "required", placeholder: "Password"
+    .form-item
+      =f.label :password_confirmation
+      =f.password_field :password_confirmation
+    .button-panel
+      =f.submit '新規登録', class: 'button'
+    .form-footer
+     =link_to "ログイン",  new_user_session_path
